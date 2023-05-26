@@ -28,8 +28,8 @@ for (const name of Object.keys(nets)) {
 console.log("Network Infterface:");
 console.log(results);
 
-//require("dotenv").config({path:'./.env'});
-require("dotenv").config();
+require("dotenv").config({path:'./env'});
+//require("dotenv").config();
 //start mysql connection
 var connection = mysql.createConnection({
   host     : process.env.DB_HOSTNAME, //mysql database host name
@@ -40,7 +40,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
   if (err) throw err
-  console.log('You are now connected with mysql database...')
+  console.log('Connected with mysql database...')
 })
 //end mysql connection
 
